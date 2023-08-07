@@ -1,67 +1,101 @@
 /* CORPO DA PÁGINA */
-body{
-    background-color: bisque;
+body {
+    background-image: linear-gradient(to right, rgb(252, 214, 167), bisque, rgb(248, 209, 162));
 }
-header{
+
+header {
     background-color: #4CAF50;
     padding: 0;
     margin: 0;
     border-radius: 5px;
 }
-.footer{
+
+.read{
+    background-image: linear-gradient(to right, rgb(4, 156, 4), rgb(3, 138, 3), rgb(8, 168, 8));
+    margin: -10px;
+    margin-right: -95px;
+}
+
+.footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: black;
     text-align: center;
-    background-color: grey;
+    background-image: linear-gradient(to right, rgb(109, 109, 109), rgb(139, 139, 139), rgb(102, 102, 102));
 }
-
 
 
 /* TEXTS */
 
-.topotitulo{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.topotitulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 50px;
     margin: 0;
 }
-.center{
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+.center {
+    margin: auto;
+    width: 100%;
+    vertical-align: middle;
 }
 
-.titulo{
+.titulo {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: bolder;
     margin-bottom: 50px;
 }
 
-.anodireita{
+.anodireita {
     position: fixed;
     right: 25px;
     top: 16px;
     font-weight: bold;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.espacamento{
+    margin-top: 20px;
+}
+
+
+
+
 /* PROPS */
 
-.botaomenu{
+.botaomenu {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding: 15px 250px;
+    padding: 15px 80px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-image: linear-gradient(to right, green, #4CAF50, green);
     border: none;
     border-radius: 15px;
     margin-bottom: 20px;
+}
+
+.botaoicone {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 10px 10px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #0c0c0c;
+    background-image: linear-gradient(to right, green, #4CAF50, green);
+    border: none;
+    border-radius: 15px;
 }
