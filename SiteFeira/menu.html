@@ -9,51 +9,93 @@
 </head>
 
 <body>
-    <div class="read">
-        <table>
+    <div id="Menu">
+        <div class="read">
+            <table>
+                <tr>
+                    <td>
+                        <h3 class="topotitulo">Início</h3>
+                    </td>
+                    <td>
+                        <button class="botaoicone anodireita">
+                            T: 301
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="center">
+            <p class="titulo center" , style="margin-top: 30px;">Bem vindo! Escolha a opção desejada</p>
+        </div>
+        <div class="espacamento" style="margin-bottom: 120px;"></div>
+
+        <table class="center">
             <tr>
                 <td>
-                    <h3 class="topotitulo">Início</h3>
+                    <button class="botaomenu" onclick="return push('Livro', 'Menu');">Livro</button>
                 </td>
                 <td>
-                    <button class="botaoicone anodireita">
-                        T: 301
-                    </button>
+                    <button class="botaomenu">Quiz</button>
                 </td>
             </tr>
         </table>
-    </div>
-    <div class="center">
-        <p class="titulo", style="margin-top: 30px;">Bem vindo! Escolha a opção desejada</p>
-    </div>
-    <div class="espacamento" style="margin-bottom: 120px;"></div>
 
-    <table class="center">
-        <tr>
-            <td>
-                <button class="botaomenu">Livro</button>
-            </td>
-            <td>
-                <button class="botaomenu">Quiz</button>
-            </td>
-        </tr>
-    </table>
+        <div class="fontemeio center bold" style="text-align: center; position: fixed;">
+            - Teste seus conhecimentos obtidos em nossa barraca da feira de humanas do Barão!
+        </div>
+        <div class="espacamento"></div>
+        <div class="fontemeio center bold" style="text-align: center; position: fixed;">
+            - Obtendo mais de 60 pontos, ganhe um prêmio!
+        </div>
 
-    <div class="fontemeio center bold" style="text-align: center; position: fixed;">
-        - Teste seus conhecimentos obtidos em nossa barraca da feira de humanas do Barão!
-    </div>
-    <div class="espacamento"></div>
-    <div class="fontemeio center bold" style="text-align: center; position: fixed;">
-        - Obtendo mais de 60 pontos, ganhe um prêmio!
+        <div class="center" , style="bottom: 40px; position: fixed;">
+            <button class="botaoparticipantes">Sobre o trabalho</button>
+        </div>
+
+        <div class="footer">
+            <p class="bold">Atualmente, 0 pessoas realizaram o quiz!</p>
+        </div>
     </div>
 
-    <div class="center", style="bottom: 40px; position: fixed;">
-        <button class="botaoparticipantes">Sobre o trabalho</button>
+    <div id = "Livro" style="display: none;">
+        <div class="read">
+            <table>
+                <tr>
+                    <td>
+                        <button class="botaoicone" style="font-size: 12px;" onclick=" return push('Menu', 'Livro')">←</button>
+                    </td>
+                    <td>
+                        <h3 class="topotitulo">Capítulos</h3>
+                    </td>
+                    <td>
+                        <button class="botaoicone anodireita">
+                            T: 301
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <div class="espacamento"></div>
+            
+        </div>
     </div>
 
-    <div class="footer">
-        <p class="bold">Atualmente, 0 pessoas realizaram o quiz!</p>
-    </div>
+
+    
+
+    <script>
+        /*
+        --------Troca Página----------
+
+        Chame a funcao 'Push', juntamente com a página que queira abrir, logo a que queira fechar
+
+        ------------------------------
+        */
+        function push(shown, hidden) {
+            document.getElementById(shown).style.display = 'block';
+            document.getElementById(hidden).style.display = 'none';
+            return false;
+        }
+    </script>
 </body>
 
 </html>
