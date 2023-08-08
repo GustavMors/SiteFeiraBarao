@@ -26,9 +26,9 @@
             </table>
         </div>
         <div class="center">
-            <p class="titulo center" , style="margin-top: 30px;">Bem vindo! Escolha a opção desejada</p>
+            <p class="titulo center" , style="margin-top: 40px;">Bem vindo! Escolha a opção desejada</p>
         </div>
-        <div class="espacamento" style="margin-bottom: 120px;"></div>
+        <div class="espacamento" style="margin-bottom: 140px;"></div>
 
         <table class="center">
             <tr>
@@ -36,7 +36,7 @@
                     <button class="botaomenu" onclick="return push('Livro', 'Menu');">Livro</button>
                 </td>
                 <td>
-                    <button class="botaomenu">Quiz</button>
+                    <button class="botaomenu" onclick="return push('Quiz', 'Menu');">Quiz</button>
                 </td>
             </tr>
         </table>
@@ -49,8 +49,9 @@
             - Obtendo mais de 60 pontos, ganhe um prêmio!
         </div>
 
+
         <div class="center" , style="bottom: 40px; position: fixed;">
-            <button class="botaoparticipantes">Sobre o trabalho</button>
+            <button class="botaoparticipantes" onclick="push('Sobre', 'Menu');">Sobre o trabalho</button>
         </div>
 
         <div class="footer">
@@ -63,10 +64,54 @@
             <table>
                 <tr>
                     <td>
-                        <button class="botaoicone" style="font-size: 12px;" onclick=" return push('Menu', 'Livro')">←</button>
+                        <button class="botaoiconevoltar" onclick=" return push('Menu', 'Livro')">←</button>
                     </td>
                     <td>
                         <h3 class="topotitulo">Capítulos</h3>
+                    </td>
+                    <td>
+                        <button class="botaoicone anodireita">
+                            T: 301
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <div class="espacamento"></div>
+
+        </div>
+    </div>
+
+    <div id = "Quiz" style="display: none;">
+        <div class="read">
+            <table>
+                <tr>
+                    <td>
+                        <button class="botaoiconevoltar" onclick=" return push('Menu', 'Quiz')">←</button>
+                    </td>
+                    <td>
+                        <h3 class="topotitulo">Quiz</h3>
+                    </td>
+                    <td>
+                        <button class="botaoicone anodireita">
+                            T: 301
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <div class="espacamento"></div>
+
+        </div>
+    </div>
+
+    <div id = "Sobre" style="display: none;">
+        <div class="read">
+            <table>
+                <tr>
+                    <td>
+                        <button class="botaoiconevoltar" onclick=" return push('Menu', 'Sobre')">←</button>
+                    </td>
+                    <td>
+                        <h3 class="topotitulo">Sobre</h3>
                     </td>
                     <td>
                         <button class="botaoicone anodireita">
