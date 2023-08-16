@@ -5,8 +5,9 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <title>ProJET</title>
-    <link rel="stylesheet" href="css/cssbrabo.css">
-    <link rel="icon" type="images/x-icon" href="https://static.vecteezy.com/system/resources/previews/010/161/252/original/book-icon-sign-symbol-design-free-png.png">
+    <link rel="stylesheet" href="css/cssbrabovtwo.css">
+    <link rel="icon" type="images/x-icon"
+        href="https://static.vecteezy.com/system/resources/previews/010/161/252/original/book-icon-sign-symbol-design-free-png.png">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
                         <h3 class="topotitulo">Início</h3>
                     </td>
                     <td>
-                        <button class="botaoicone anodireita">
+                        <button class="botaoicone anodireita" onclick=" return push('CGPT', 'Menu');">
                             T: 301
                         </button>
                     </td>
@@ -36,7 +37,7 @@
                     <button class="botaomenu" onclick="return push('Livro', 'Menu');">Livro</button>
                 </td>
                 <td>
-                    <button class="botaomenu" onclick="return push('Quiz', 'Menu');">Quiz</button>
+                    <button class="botaomenu" onclick="return push('Quiz', 'Menu');" id='botaoluz'>Quiz</button>
                 </td>
             </tr>
         </table>
@@ -59,7 +60,7 @@
         </div>
     </div>
 
-    <div id = "Livro" style="display: none;">
+    <div id="Livro" style="display: none;">
         <div class="read">
             <table>
                 <tr>
@@ -81,7 +82,7 @@
         </div>
     </div>
 
-    <div id = "Quiz" style="display: none;">
+    <div id="Quiz" style="display: none;">
         <div class="read">
             <table>
                 <tr>
@@ -103,7 +104,7 @@
         </div>
     </div>
 
-    <div id = "Sobre" style="display: none;">
+    <div id="Sobre" style="display: none;">
         <div class="read">
             <table>
                 <tr>
@@ -126,7 +127,7 @@
     </div>
 
 
-    
+
 
     <script>
         /*
@@ -142,6 +143,38 @@
             return false;
         }
     </script>
+
+
+
+
+
+    <div id="CGPT" style="display: none;">
+
+        <div class="read">
+            <table>
+                <tr>
+                    <td>
+                        <button class="botaoiconevoltar" onclick=" return push('Menu', 'CGPT')">←</button>
+                    </td>
+                    <td>
+                        <h3 class="topotitulo">Secreto</h3>
+                    </td>
+                    <td>
+                        <button class="botaoicone anodireita">
+                            T: 301
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <div class="espacamento"></div>
+
+        </div>
+    </div>
+
+    <script>
+       // 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
+    </script>
+
 </body>
 
 </html>
