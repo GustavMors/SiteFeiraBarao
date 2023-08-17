@@ -9,18 +9,6 @@
         function setStyleSheet(url){
            var stylesheet = document.getElementById("stylesheet");
            stylesheet.setAttribute('href', url);
-
-        }
-
-        function alterarModo(){
-            if(document.getElementById('botaoluz').onclick == setStyleShet('css/cssbrabo.css')){
-                document.getElementById('botaoluz').setAttribute("onClick", "setStyleShet('css/cssbrabovtwo.css')")
-                setStyleSheet('css/cssbrabovtwo.css')
-            }
-            else{
-                document.getElementById('botaoluz').setAttribute("onClick", "setStyleSheet('css/cssbrabo.css')")
-                setStyleSheet('css/cssbrabo.css')
-            }
         }
     </script>
     
@@ -77,7 +65,19 @@
         </div>
 
         <div class="footer">
-            <p class="bold">Atualmente, 0 pessoas realizaram o quiz!</p>
+            <table>
+                <tr>
+                    <td>
+                        <button class="botaoiconevoltar" onclick="setStyleSheet('css/cssbrabovtwo.css')" style="margin-left: 10px;">D</button>
+                    </td>
+                    <td>
+                        <p class="bold" style="margin-left: 40px;">Atualmente, 0 pessoas realizaram o quiz!</p>
+                    </td>
+                    <td>
+                        <button class="botaoiconevoltar" onclick="setStyleSheet('css/cssbrabo.css')" style="margin-left: 41px;">L</button>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 
@@ -181,7 +181,7 @@
                         <h3 class="topotitulo">Secreto</h3>
                     </td>
                     <td>
-                        <button class="botaoicone anodireita" id = 'botaoluz' onclick="setStyleShet()" href="#">
+                        <button class="botaoicone anodireita">
                             T: 301
                         </button>
                     </td>
