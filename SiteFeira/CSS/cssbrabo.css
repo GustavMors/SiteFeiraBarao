@@ -170,3 +170,31 @@ header {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+
+
+  .botaocapitulo {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 50px 70px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #0c0c0c;
+    background-image: linear-gradient(to right, rgb(0, 175, 0), #009105);
+    border: none;
+    border-radius: 8px;
+    box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.botaocapitulo:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
