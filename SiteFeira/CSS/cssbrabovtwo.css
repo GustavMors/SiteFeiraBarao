@@ -175,16 +175,17 @@ header {
   }
 
   .botaocapitulo {
+    margin: 25px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding: 50px 70px;
+    padding: 30px 70px;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #0c0c0c;
-    background-image: linear-gradient(to right,  rgb(5, 26, 148), #1b47be, rgb(11, 22, 180));
+    background-image: linear-gradient(to top,  rgb(1, 19, 121), #0738be, rgb(68, 81, 255));
     border: none;
     border-radius: 8px;
     box-shadow:

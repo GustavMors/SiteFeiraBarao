@@ -177,13 +177,13 @@ header {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding: 50px 70px;
+    padding: 30px 70px;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #0c0c0c;
-    background-image: linear-gradient(to right, rgb(0, 175, 0), #009105);
+    background-image: linear-gradient(to top, rgb(19, 201, 19), #076b0b);
     border: none;
     border-radius: 8px;
     box-shadow:
