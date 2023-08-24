@@ -26,6 +26,12 @@ header {
     background-image: linear-gradient(to right, rgb(109, 109, 109), rgb(139, 139, 139), rgb(102, 102, 102));
 }
 
+.flex {
+    display: flex;
+    /*aling-items: center; (vertical)*/
+    justify-content: center;
+}
+
 
 /* TEXTS */
 
