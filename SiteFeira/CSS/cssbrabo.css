@@ -34,6 +34,10 @@ header {
     justify-content: center;
 }
 
+.container{
+    display: flex;
+}
+
 
 /* TEXTS */
 
@@ -86,9 +90,6 @@ header {
 /* PROPS */
 
 .botaomenu {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     padding: 15px 80px;
     font-size: 24px;
     cursor: pointer;

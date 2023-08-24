@@ -27,6 +27,9 @@ header {
     text-align: center;
     background-image: linear-gradient(to right, rgb(109, 109, 109), rgb(139, 139, 139), rgb(102, 102, 102));
 }
+.container{
+    display: flex;
+}
 
 
 /* TEXTS */
@@ -83,9 +86,6 @@ header {
 /* PROPS */
 
 .botaomenu {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
     padding: 15px 80px;
     font-size: 24px;
     cursor: pointer;
