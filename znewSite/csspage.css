@@ -10,13 +10,6 @@ body {
     background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(8, 7, 44), rgb(0, 0, 0));
 }
 
-.footer {
-    display: flex;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    background-image: linear-gradient(to right, rgb(109, 109, 109), rgb(139, 139, 139), rgb(102, 102, 102));
-}
 
 .container {
     display: flex;
