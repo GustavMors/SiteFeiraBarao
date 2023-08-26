@@ -1,0 +1,9 @@
+Segoe UI Variable
+
+Fonte de marketing Windows
+
+Gustavo, você pode mudar entre Bold Display e Semibold Small
+
+- Use Bold Display para títulos ou frases curtas isoladas
+
+- Use Semibold Small para textos
