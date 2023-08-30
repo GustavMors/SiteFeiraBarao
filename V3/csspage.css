@@ -47,7 +47,7 @@ body {
   }
 
   .botaoquiz {
-    padding: 70px 70px;
+    padding: 80px 70px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -92,4 +92,5 @@ body {
     height: 10%;
     width: 95%;
     background-color: rgb(155, 155, 155);
+    border-radius: 15px;
   }
