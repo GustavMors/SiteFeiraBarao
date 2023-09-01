@@ -89,8 +89,8 @@ body {
   .elementox{
     display: flex;
     margin-top: 10%;
-    height: 10%;
-    width: 95%;
+    margin-bottom: 1%;
+    width: 85%;
     background-color: rgb(155, 155, 155);
     border-radius: 25px;
   }
