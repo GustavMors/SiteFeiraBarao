@@ -12,6 +12,9 @@ body {
     background-position: center;
 }
 
+p{
+    font-family: padrao;
+}
 @font-face {
     font-family: 'padrao';
     src: url('assets/SegUIVar.ttf');
@@ -20,6 +23,28 @@ body {
 
 .container {
     display: flex;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    justify-content: center;
+}
+
+.centermid{
+    align-items: center;
+}
+
+.centertext{
+    text-align: center;
 }
 
 
