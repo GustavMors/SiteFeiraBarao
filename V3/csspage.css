@@ -12,9 +12,10 @@ body {
     background-position: center;
 }
 
-p{
+p {
     font-family: padrao;
 }
+
 @font-face {
     font-family: 'padrao';
     src: url('assets/SegUIVar.ttf');
@@ -25,27 +26,28 @@ p{
     display: flex;
 }
 
-.row{
+.row {
     display: flex;
     flex-direction: row;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
 }
 
-.center{
+.center {
     justify-content: center;
 }
 
-.centermid{
+.centermid {
     align-items: center;
 }
 
 .centertext{
     text-align: center;
 }
+
 
 
 /* PROPS */
@@ -64,14 +66,14 @@ p{
     background-color: rgb(155, 155, 155);
     border: none;
     border-radius: 20px;
-    
+
 }
 
 .botaolivro:active {
     transform: translateY(4px);
-  }
+}
 
-  .botaoquiz {
+.botaoquiz {
     padding: 75px 70px;
     cursor: pointer;
     text-align: center;
@@ -85,14 +87,14 @@ p{
     background-color: rgb(155, 155, 155);
     border: none;
     border-radius: 20px;
-    
+
 }
 
 .botaoquiz:active {
     transform: translateY(4px);
-  }
+}
 
-  .botaoparticipantes {
+.botaoparticipantes {
     margin: 7%;
     padding: 1% 15%;
     cursor: pointer;
@@ -110,12 +112,53 @@ p{
 .botaoparticipantes:active {
     background-image: linear-gradient(to right, rgb(117, 117, 117), #868686, rgb(156, 156, 156));
     transform: translateY(4px);
-  }
-  .elementox{
+}
+
+.botaostart {
+    margin: 7%;
+    padding: 2% 25%;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: darkslateblue;
+    font-family: padrao;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+}
+
+.botaostart:active {
+    background-image: linear-gradient(to right, rgb(117, 117, 117), #868686, rgb(156, 156, 156));
+    transform: translateY(4px);
+}
+
+.botaoquestion{
+    background-color: darkslateblue;
+    margin: 7%;
+    padding: 5% 20%;
+    cursor: pointer;
+    text-align: center;
+    font-family: padrao;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 25px;
+    border: none;
+}
+
+.botaoquestion:active {
+    background-image: linear-gradient(to right, rgb(117, 117, 117), #868686, rgb(156, 156, 156));
+    transform: translateY(4px);
+}
+
+
+.elementox {
     display: flex;
     margin-top: 10%;
     margin-bottom: 1%;
     width: 85%;
     background-color: rgb(155, 155, 155);
     border-radius: 25px;
-  }
+}
