@@ -9,43 +9,36 @@
     <link rel="icon" type="images/x-icon" href="assets/purplebook.png">
 </head>
 
-<body
-    style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; ">
+<body style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; ">
     <div id="Initial" class="container centermid column" style="height: 700px;">
         <img src="assets/pngwing.com.png" height="40%" width="80%">
         <div class="container centermid column" style="background-color: white; border-radius: 25px; width: 80%;">
-            <p style="font-size: 200%; font-weight: bold; margin-bottom: 2%; text-align: center;">Um divertido
-                QUIZ<br>Te espera!</p>
-            <p style="font-size: 140%; margin: 0%; text-align: center; font-weight: 450;">Teste seus conhecimentos
-                com<br>base na apresentação!</p>
+            <p style="font-size: 200%; font-weight: bold; margin-bottom: 2%; text-align: center;">Um divertido QUIZ<br>Te espera!</p>
+            <p style="font-size: 140%; margin: 0%; text-align: center; font-weight: 450;">Teste seus conhecimentos com<br>base na apresentação!</p>
             <Button class="botaoicon" onclick="push('Question', 'Initial')">></Button>
         </div>
 
     </div>
 
     <div id="Question" class="container centermid center column" style="display: none; height: 700px;">
-        <div class="container centermid center column"
-            style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
+        <div class="container centermid center column" style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
             <img src="assets//1f4da.png" width="auto" height="40%">
-            <p id = "pergunta" style="font-size: 240%; font-weight: bold; text-align: center; margin-top: 0%;"></p>        
+            <p style="font-size: 240%; font-weight: bold; text-align: center; margin-top: 0%;">O que é uma onomatopeia?</p>
         </div>
-        <div id="alternatives" class="container centermid column">
-            <Button class="botaoquestion" onclick="somarpontos(0)">Poema emocionante</Button>
-            <Button class="botaoquestion" onclick="somarpontos(0)">História famosa</Button>
-            <Button class="botaoquestion" onclick="somarpontos(1)">Figura de linguagem</Button>
-            <Button class="botaoquestion" onclick="somarpontos(0)">Espécie de inseto</Button>
-        </div>
-        <div class="container row" style="justify-content: space-around;">
-            <button id="botaoreturn" class="botaoicon"> - </button>
-            <button id="botaoavance" class="botaoicon" onclick="quiz()"> + </button>
-        </div>
+            <div class="container centermid column">
+                <Button class="botaoquestion" onclick="somarpontos(0)">Poema emocionante</Button>
+                <Button class="botaoquestion" onclick="somarpontos(0)">História famosa</Button>
+                <Button class="botaoquestion" onclick="somarpontos(1)">Figura de linguagem</Button>
+                <Button class="botaoquestion" onclick="somarpontos(0)">Espécie de inseto</Button>
+            </div>
     </div>
 
     <div id="Results" class="container centermid center column" style="display: none; height: 700px;">
-        <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">Resultados: Test</p>
-        <p style="font-size: 200%; font-weight: bold; color: white; text-align: center;"><span id='points'></span></p>
+            <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">Resultados: Test</p>
+            <p style="font-size: 200%; font-weight: bold; color: white; text-align: center;"><span id = 'points'></span></p>
     </div>
     <script>
+        var pontos = 'Não definido';
         var Questions = [
             {
                 question: "O que é uma onomatopeia?",
@@ -58,7 +51,7 @@
                 res: "c"
             },
             {
-                question: "O que talvez é uma onomatopeia?",
+                question: "O que não é uma onomatopeia?",
                 alternatives: {
                     a: "BOOM",
                     b: "Shiu",
@@ -79,19 +72,22 @@
             }
 
         ]
-
-        function quiz() {
-            document.getElementById('pergunta').innerHTML = '';
-            var ramdomquestion = Questions[Math.floor(Math.random() * 3)];
-            document.getElementById('pergunta').innerHTML += ramdomquestion.question;
+        function somarpontos(result){
+            if(result == 1){
+                pontos = 'Acertou!!'
+                document.getElementById("points").innerHTML = pontos;
+                push('Results', 'Question')
+            } else{
+                pontos = 'Errou!!'
+                document.getElementById("points").innerHTML = pontos;
+                push('Results', 'Question')
+            }
         }
         function push(shown, hidden) {
             document.getElementById(shown).style.display = 'block';
             document.getElementById(hidden).style.display = 'none';
             return false;
-        } 
-        
-        quiz();
+        }   
     </script>
 </body>
 
