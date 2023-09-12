@@ -29,11 +29,8 @@
             <img src="assets//1f4da.png" width="auto" height="40%">
             <p id = "pergunta" style="font-size: 240%; font-weight: bold; text-align: center; margin-top: 0%;"></p>        
         </div>
-        <div id="alternatives" class="container centermid column">
-            <Button class="botaoquestion" onclick="somarpontos(0)">Poema emocionante</Button>
-            <Button class="botaoquestion" onclick="somarpontos(0)">História famosa</Button>
-            <Button class="botaoquestion" onclick="somarpontos(1)">Figura de linguagem</Button>
-            <Button class="botaoquestion" onclick="somarpontos(0)">Espécie de inseto</Button>
+        <div id="alternativas" class="container centermid column">
+
         </div>
         <div class="container row" style="justify-content: space-around;">
             <button id="botaoreturn" class="botaoicon"> - </button>
@@ -82,8 +79,16 @@
 
         function quiz() {
             document.getElementById('pergunta').innerHTML = '';
+            document.getElementById('alternativas').innerHTML = '';
             var ramdomquestion = Questions[Math.floor(Math.random() * 3)];
             document.getElementById('pergunta').innerHTML += ramdomquestion.question;
+            document.getElementById('alternativas').innerHTML += `
+            <Button class="botaoquestion">${ramdomquestion.alternatives.a}</Button>
+            <Button class="botaoquestion">${ramdomquestion.alternatives.b}</Button>
+            <Button class="botaoquestion">${ramdomquestion.alternatives.c}</Button>
+            <Button class="botaoquestion">${ramdomquestion.alternatives.d}</Button>
+
+            `
         }
         function push(shown, hidden) {
             document.getElementById(shown).style.display = 'block';
