@@ -9,18 +9,23 @@
     <link rel="icon" type="images/x-icon" href="assets/purplebook.png">
 </head>
 
-<body style="background-image: url(assets/quiz-time.jpg); background-size: cover; background-position: center center; height: 100%; ">
+<body style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; ">
     <div id="Initial" class="container centermid column" style="height: 700px;">
-        <p style="font-size: 220%; font-weight: bold; margin-bottom: 1%; color: white;">QUIZ</p>
-        <p style="font-size: 150%; margin: 0%; color: white;">Escolha a opção correta!</p>
-        <Button class="botaostart" onclick="push('Question', 'Initial')">Começar</Button>
-        <a class="botaoparticipantes" style="align-self: center;" href="index.html">Voltar</a>
+        <img src="assets/pngwing.com.png" height="40%" width="80%">
+        <div class="container centermid column" style="background-color: white; border-radius: 25px; width: 80%;">
+            <p style="font-size: 200%; font-weight: bold; margin-bottom: 2%; text-align: center;">Um divertido QUIZ<br>Te espera!</p>
+            <p style="font-size: 140%; margin: 0%; text-align: center; font-weight: 450;">Teste seus conhecimentos com<br>base na apresentação!</p>
+            <Button class="botaoicon" onclick="push('Question', 'Initial')">></Button>
+        </div>
 
     </div>
 
     <div id="Question" class="container centermid center column" style="display: none; height: 700px;">
-        <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">O que é uma onomatopeia?(pergunta teste)</p>
-            <div class="container centermid column" style="background-color: rgba(255, 255, 255, 0.247); margin-left: 10%; margin-right: 10%; border-radius: 15px;">
+        <div class="container centermid center column" style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
+            <img src="assets//1f4da.png" width="auto" height="40%">
+            <p style="font-size: 240%; font-weight: bold; text-align: center; margin-top: 0%;">O que é uma onomatopeia?</p>
+        </div>
+            <div class="container centermid column">
                 <Button class="botaoquestion" onclick="somarpontos(0)">Poema emocionante</Button>
                 <Button class="botaoquestion" onclick="somarpontos(0)">História famosa</Button>
                 <Button class="botaoquestion" onclick="somarpontos(1)">Figura de linguagem</Button>

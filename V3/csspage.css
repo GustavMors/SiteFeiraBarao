@@ -114,6 +114,26 @@ p {
     transform: translateY(4px);
 }
 
+.botaoicon {
+    margin: 7%;
+    padding: 5.5% 8%;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: orange;
+    font-family: padrao;
+    font-weight: bold;
+    font-size: 150%;
+    border: none;
+    border-radius: 100%;
+}
+
+.botaoicon:active {
+    background-image: linear-gradient(to right, rgb(117, 117, 117), #868686, rgb(156, 156, 156));
+    transform: translateY(4px);
+}
+
 .botaostart {
     margin: 7%;
     padding: 2% 25%;
@@ -135,8 +155,10 @@ p {
 }
 
 .botaoquestion{
-    background-color: darkslateblue;
+    background-color: orange;
     margin: 7%;
+    box-sizing: unset;
+    width: 40%;
     padding: 5% 20%;
     cursor: pointer;
     text-align: center;
