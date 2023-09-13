@@ -58,14 +58,14 @@
                 res: "c"
             },
             {
-                question: "O que é uma oligarquia?",
+                question: "O que talvez é uma onomatopeia?",
                 alternatives: {
-                    a: "Tipo de governo",
-                    b: "Casa da ganyu",
-                    c: "Uma marca de café",
-                    d: "Arma secreta"
+                    a: "BOOM",
+                    b: "Shiu",
+                    c: "Bang",
+                    d: "que?"
                 },
-                res: "a"
+                res: "d"
             },
             {
                 question: "O que não é uma onomatopeia?",
@@ -74,46 +74,6 @@
                     b: "Shiu",
                     c: "Nhoummmmm",
                     d: "Bang"
-                },
-                res: "a"
-            },
-            {
-                question: "1 + 1?",
-                alternatives: {
-                    a: "12",
-                    b: "2",
-                    c: "1",
-                    d: "0"
-                },
-                res: "b"
-            },
-            {
-                question: "Quem é o cara?",
-                alternatives: {
-                    a: "Murilo",
-                    b: "João",
-                    c: "Líder",
-                    d: "Renan"
-                },
-                res: "a"
-            },
-            {
-                question: "Qual a soma do número de carbonos de um anel benzênico?",
-                alternatives: {
-                    a: "4",
-                    b: "12",
-                    c: "6",
-                    d: "8"
-                },
-                res: "c"
-            },
-            {
-                question: "O que cai em pé e corre deitado",
-                alternatives: {
-                    a: "João de chinelo",
-                    b: "Pingos de chuva",
-                    c: "Asheley caindo da escada",
-                    d: "Uma calha gigante"
                 },
                 res: "a"
             },
@@ -130,7 +90,7 @@
             document.getElementById('alternativas').innerHTML = '';
             var min, max, r, n, p;
             min = 0;
-            max = 4;
+            max = 2;
             r = 1;
             for (let i = 0; i < r; i++) {
                 do {
@@ -155,7 +115,7 @@
         }
 
         function revise(correct, selected) {
-            if (numberquestion <= 5) {
+            if (numberquestion <= 3) {
                 if (correct == selected) {
                     acepts = acepts + 1;
                     nextquestion();

@@ -116,7 +116,8 @@ p {
 
 .botaoicon {
     margin: 7%;
-    padding: 5.5% 8%;
+    height: 80px;
+    width: 80px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -126,7 +127,7 @@ p {
     font-weight: bold;
     font-size: 150%;
     border: none;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 .botaoicon:active {
@@ -156,7 +157,7 @@ p {
 
 .botaoquestion{
     background-color: orange;
-    margin: 7%;
+    margin: 3%;
     box-sizing: unset;
     width: 40%;
     padding: 5% 20%;
