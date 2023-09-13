@@ -27,7 +27,7 @@
         <div class="container centermid center column"
             style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
             <img src="assets//1f4da.png" width="auto" height="40%">
-            <p id = "pergunta" style="font-size: 240%; font-weight: bold; text-align: center; margin-top: 0%;"></p>        
+            <p id="pergunta" style="font-size: 240%; font-weight: bold; text-align: center; margin-top: 0%;"></p>
         </div>
         <div id="alternativas" class="container centermid column">
 
@@ -40,7 +40,8 @@
 
     <div id="Results" class="container centermid center column" style="display: none; height: 700px;">
         <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">Resultados: Test</p>
-        <p style="font-size: 200%; font-weight: bold; color: white; text-align: center;"><span id='points'></span></p>
+        <p id='FinalResult' style="font-size: 200%; font-weight: bold; color: white; text-align: center;"></p>
+        
     </div>
     <script>
         var Questions = [
@@ -77,7 +78,7 @@
 
         ]
 
-        function start(){
+        function start() {
             push('Question', 'Initial');
             nextquestion()
         }
@@ -85,21 +86,56 @@
         function nextquestion() {
             document.getElementById('pergunta').innerHTML = '';
             document.getElementById('alternativas').innerHTML = '';
-            var ramdomquestion = Questions[Math.floor(Math.random() * 3)];
+            var min, max, r, n, p;
+            min = 0;
+            max = 2;
+            r = 1;
+            for (let i = 0; i < r; i++) {
+                do {
+                    n = Math.floor(Math.random() * (max - min + 1)) + min;
+                    p = repiter.includes(n);
+                    if (!p) {
+                        repiter.push(n);
+                    }
+                }
+                while (p);
+            }
+            var ramdomquestion = Questions[n];
             document.getElementById('pergunta').innerHTML += ramdomquestion.question;
             document.getElementById('alternativas').innerHTML += `
-            <Button class="botaoquestion">${ramdomquestion.alternatives.a}</Button>
-            <Button class="botaoquestion">${ramdomquestion.alternatives.b}</Button>
-            <Button class="botaoquestion">${ramdomquestion.alternatives.c}</Button>
-            <Button class="botaoquestion">${ramdomquestion.alternatives.d}</Button>
+            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "a")'>${ramdomquestion.alternatives.a}</Button>
+            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "b")'>${ramdomquestion.alternatives.b}</Button>
+            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "c")'>${ramdomquestion.alternatives.c}</Button>
+            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "d")'>${ramdomquestion.alternatives.d}</Button>
             `
+            console.log(repiter)
+            numberquestion = numberquestion + 1;
+        }
+
+        function revise(correct, selected) {
+            if (numberquestion <= 3) {
+                if (correct == selected) {
+                    acepts = acepts + 1;
+                    nextquestion();
+                } else {
+                    nextquestion();
+                }
+            } else {
+                push('Results', 'Question')
+                document.getElementById('FinalResult').innerHTML = '';
+                document.getElementById('FinalResult').innerHTML += acepts;
+            }
         }
 
         function push(shown, hidden) {
             document.getElementById(shown).style.display = 'block';
             document.getElementById(hidden).style.display = 'none';
             return false;
-        } 
+        }
+
+        let numberquestion = 1;
+        let acepts = 0;
+        var repiter = [];
     </script>
 </body>
 

@@ -9,8 +9,7 @@
     <link rel="icon" type="images/x-icon" href="assets/purplebook.png">
 </head>
 
-<body
-    style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; ">
+<body style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; ">
     <div id="Initial" class="container centermid column" style="height: 700px;">
         <p style="font-size: 220%; font-weight: bold; margin-bottom: 1%; color: white;">QUIZ</p>
         <p style="font-size: 150%; margin: 0%; color: white;">Escolha a opção correta!</p>
@@ -20,26 +19,27 @@
     </div>
 
     <div id="Question" class="container centermid center column" style="display: none; height: 700px;">
-        <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">O que é uma
-            onomatopeia?(pergunta teste)</p>
-        <Button class="botaoquestion" onclick="somarpontos(0)">Poema emocionante</Button>
-        <Button class="botaoquestion" onclick="somarpontos(0)">História famosa</Button>
-        <Button class="botaoquestion" onclick="somarpontos(1)">Figura de linguagem</Button>
-        <Button class="botaoquestion" onclick="somarpontos(0)">Espécie de inseto</Button>
+        <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">O que é uma onomatopeia?(pergunta teste)</p>
+            <div class="container centermid column" style="background-color: rgba(255, 255, 255, 0.247); margin-left: 10%; margin-right: 10%; border-radius: 15px;">
+                <Button class="botaoquestion" onclick="somarpontos(0)">Poema emocionante</Button>
+                <Button class="botaoquestion" onclick="somarpontos(0)">História famosa</Button>
+                <Button class="botaoquestion" onclick="somarpontos(1)">Figura de linguagem</Button>
+                <Button class="botaoquestion" onclick="somarpontos(0)">Espécie de inseto</Button>
+            </div>
     </div>
 
     <div id="Results" class="container centermid center column" style="display: none; height: 700px;">
-        <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">Resultados: Test</p>
-        <p style="font-size: 200%; font-weight: bold; color: white; text-align: center;"><span id='points'></span></p>
+            <p style="font-size: 240%; font-weight: bold; color: white; text-align: center;">Resultados: Test</p>
+            <p style="font-size: 200%; font-weight: bold; color: white; text-align: center;"><span id = 'points'></span></p>
     </div>
     <script>
         var pontos = 'Não definido';
-        function somarpontos(result) {
-            if (result == 1) {
+        function somarpontos(result){
+            if(result == 1){
                 pontos = 'Acertou!!'
                 document.getElementById("points").innerHTML = pontos;
                 push('Results', 'Question')
-            } else {
+            } else{
                 pontos = 'Errou!!'
                 document.getElementById("points").innerHTML = pontos;
                 push('Results', 'Question')
