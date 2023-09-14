@@ -12,7 +12,7 @@
 <body
     style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; ">
     <div id="Initial" class="container centermid column" style="height: 800px;">
-        <img src="assets/pngwing.com.png" height="300px" width="350px">
+        <a><img src="assets/pngwing.com.png" height="300px" width="350px"></a>
         <div class="container centermid column" style="background-color: white; border-radius: 25px; width: 80%;">
             <p style="font-size: 200%; font-weight: bold; margin-bottom: 2%; text-align: center;">Um divertido
                 QUIZ<br>Te espera!</p>
@@ -26,24 +26,20 @@
     <div id="Question" class="container centermid center column" style="display: none; height: 800px;">
         <div class="container centermid center column"
             style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
-            <img src="assets//1f4da.png" width="auto" height="40%">
-            <p id="pergunta" style="font-size: 240%; font-weight: bold; text-align: center; margin-top: 0%;"></p>
+            <img src="assets//1f4da.png" width="auto" height="30%">
+            <p id="pergunta" style="font-size: 180%; font-weight: 650; text-align: center; margin-top: 2%;"></p>
         </div>
-        <div id="alternativas" class="container centermid column">
-
-        </div>
-        <div class="container row" style="justify-content: space-around;">
-            <button id="botaoreturn" class="botaoicon"> - </button>
-            <button id="botaoavance" class="botaoicon" onclick="nextquestion()"> + </button>
-        </div>
+        <div id="alternativas" class="container centermid column"></div>
     </div>
 
     <div id="Results" class="container centermid center column" style="display: none; height: 800px;">
-        <div class="container column centermid center" style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
-            <p style="font-size: 240%; font-weight: bold; text-align: center;">Resultados: Test</p>
+        <div class="container column centermid center"
+            style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
+            <p style="font-size: 240%; font-weight: bold; text-align: center;">Resultados:</p>
             <p id='FinalResult' style="font-size: 200%; font-weight: bold; text-align: center;"></p>
+            <a class="botaoquestion" href="xquiz.html">Refazer quiz</a>
         </div>
-        
+
     </div>
     <script>
         var Questions = [
@@ -68,14 +64,14 @@
                 res: "a"
             },
             {
-                question: "O que não é uma onomatopeia?",
+                question: "\"Embora o Brasil tenha tudo para ser um país próspero, o povo não estava a sua altura\" Quem foi o autor da frase?",
                 alternatives: {
-                    a: "Opa",
-                    b: "Shiu",
-                    c: "Nhoummmmm",
-                    d: "Bang"
+                    a: "Monteiro Lobato",
+                    b: "Miguel Colto",
+                    c: "Freye",
+                    d: "Florestan Fernandes"
                 },
-                res: "a"
+                res: "c"
             },
             {
                 question: "1 + 1?",
@@ -88,14 +84,14 @@
                 res: "b"
             },
             {
-                question: "Quem é o cara?",
+                question: "\"País de mestiços onde o branco não tem força para organizar uma Ku Klux Klan é um país perdido[...]\" Quem foi o autor da frase?",
                 alternatives: {
-                    a: "Murilo",
-                    b: "João",
-                    c: "Líder",
-                    d: "Renan"
+                    a: "Florestan Fernandes",
+                    b: "Miguel Colto",
+                    c: "Freye",
+                    d: "Monteiro Lobato"
                 },
-                res: "a"
+                res: "d"
             },
             {
                 question: "Qual a soma do número de carbonos de um anel benzênico?",
@@ -115,7 +111,7 @@
                     c: "Asheley caindo da escada",
                     d: "Uma calha gigante"
                 },
-                res: "a"
+                res: "b"
             },
 
         ]
@@ -130,7 +126,7 @@
             document.getElementById('alternativas').innerHTML = '';
             var min, max, r, n, p;
             min = 0;
-            max = 4;
+            max = Questions.length - 1;
             r = 1;
             for (let i = 0; i < r; i++) {
                 do {
@@ -150,22 +146,29 @@
             <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "c")'>${ramdomquestion.alternatives.c}</Button>
             <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "d")'>${ramdomquestion.alternatives.d}</Button>
             `
-            console.log(repiter)
             numberquestion = numberquestion + 1;
         }
 
         function revise(correct, selected) {
             if (numberquestion <= 5) {
                 if (correct == selected) {
-                    acepts = acepts + 1;
+                    acepts++;
+                    console.log(acepts)
                     nextquestion();
                 } else {
                     nextquestion();
                 }
             } else {
-                push('Results', 'Question')
-                document.getElementById('FinalResult').innerHTML = '';
-                document.getElementById('FinalResult').innerHTML += acepts;
+                if (correct == selected) {
+                    acepts++;
+                    push('Results', 'Question')
+                    document.getElementById('FinalResult').innerHTML = '';
+                    document.getElementById('FinalResult').innerHTML += `${acepts * 20} Pontos de 100!`;
+                } else {
+                    push('Results', 'Question')
+                    document.getElementById('FinalResult').innerHTML = '';
+                    document.getElementById('FinalResult').innerHTML += `${acepts * 20} Pontos de 100!`;
+                }
             }
         }
 
