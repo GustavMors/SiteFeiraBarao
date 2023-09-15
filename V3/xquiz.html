@@ -44,42 +44,42 @@
     <script>
         var Questions = [
             {
-                question: "O que é uma onomatopeia?",
+                question: "Qual sociólogo afirmava que o casamento entre raças diferentes resultava em criaturas repugnantes",
                 alternatives: {
-                    a: "Espécie de inseto",
-                    b: "História emocionante",
-                    c: "Figura de linguagem",
-                    d: "Poema legal"
-                },
-                res: "c"
-            },
-            {
-                question: "O que é uma oligarquia?",
-                alternatives: {
-                    a: "Tipo de governo",
-                    b: "Casa da ganyu",
-                    c: "Uma marca de café",
-                    d: "Arma secreta"
+                    a: "Conde Gobrineau",
+                    b: "Miguel Couto",
+                    c: "Florestan Fernandes",
+                    d: "Monteiro Lobato"
                 },
                 res: "a"
+            },
+            {
+                question: "A emenda constitucional de 1934 com o objetivo de barrar a entrada de japoneses no Brasil ficou conhecida como?",
+                alternatives: {
+                    a: "Ementa Manuel Ketshup",
+                    b: "Ementa Japonesa",
+                    c: "Emenda Miguel Couto",
+                    d: "Emenda Imigração"
+                },
+                res: "c"
             },
             {
                 question: "\"Embora o Brasil tenha tudo para ser um país próspero, o povo não estava a sua altura\" Quem foi o autor da frase?",
                 alternatives: {
                     a: "Monteiro Lobato",
-                    b: "Miguel Colto",
-                    c: "Freye",
+                    b: "Miguel Couto",
+                    c: "Alexandre Tepedino",
                     d: "Florestan Fernandes"
                 },
                 res: "c"
             },
             {
-                question: "1 + 1?",
+                question: "\"O brasileiro tem preconceito de ter preconceito\" Qual foi o autor dessa frase?",
                 alternatives: {
-                    a: "12",
-                    b: "2",
-                    c: "1",
-                    d: "0"
+                    a: "Monteiro Lobato",
+                    b: "Florestan Fernandes",
+                    c: "Miguel Couto",
+                    d: "Seu Madruga"
                 },
                 res: "b"
             },
@@ -88,42 +88,63 @@
                 alternatives: {
                     a: "Florestan Fernandes",
                     b: "Miguel Colto",
-                    c: "Freye",
+                    c: "Augustus Freye",
                     d: "Monteiro Lobato"
                 },
                 res: "d"
             },
             {
-                question: "Qual a soma do número de carbonos de um anel benzênico?",
+                question: "Quem é o pai da eugenia no Brasil?",
                 alternatives: {
-                    a: "4",
-                    b: "12",
-                    c: "6",
-                    d: "8"
+                    a: "Miguel Colto",
+                    b: "Monteiro Lobato",
+                    c: "Renato Kehl",
+                    d: "Florestan Fernandes"
                 },
                 res: "c"
             },
             {
-                question: "O que cai em pé e corre deitado",
+                question: "Qual século foi o auge do racismo científico?",
                 alternatives: {
-                    a: "João de chinelo",
-                    b: "Pingos de chuva",
-                    c: "Asheley caindo da escada",
-                    d: "Uma calha gigante"
+                    a: "XI",
+                    b: "IX",
+                    c: "XXI",
+                    d: "XIX"
+                },
+                res: "d"
+            },
+            {
+                question: "Para _______, a população brasileira iria acabar em menos de 200 anos, pois seria uma população toda mulata",
+                alternatives: {
+                    a: "Monteiro Lobato",
+                    b: "Conde de Gobrineau",
+                    c: "Florestan Fernandes",
+                    d: "Miguel Couto"
                 },
                 res: "b"
+            },
+                        {
+                question: "O branqueamento para os médicos eugênicos seria a forma de corrigir corrigir problemas genéticos adquiridos com:",
+                alternatives: {
+                    a: "O racismo",
+                    b: "A guerra",
+                    c: "A miscigenação",
+                    d: "A desigualdade"
+                },
+                res: "c"
             },
 
         ]
 
         function start() {
             push('Question', 'Initial');
-            nextquestion()
+            nextquestion();
         }
 
         function nextquestion() {
             document.getElementById('pergunta').innerHTML = '';
             document.getElementById('alternativas').innerHTML = '';
+            console.log(Questions.length);
             var min, max, r, n, p;
             min = 0;
             max = Questions.length - 1;
