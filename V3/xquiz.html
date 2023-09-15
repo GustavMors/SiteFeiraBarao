@@ -12,7 +12,7 @@
 <body
     style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; ">
     <div id="Initial" class="container centermid column" style="height: 800px;">
-        <a><img src="assets/pngwing.com.png" height="300px" width="350px"></a>
+        <a onclick="openPCv()"><img src="assets/pngwing.com.png" height="300px" width="350px"></a>
         <div class="container centermid column" style="background-color: white; border-radius: 25px; width: 80%;">
             <p style="font-size: 200%; font-weight: bold; margin-bottom: 2%; text-align: center;">Um divertido
                 QUIZ<br>Te espera!</p>
@@ -29,8 +29,9 @@
             <img src="assets//1f4da.png" width="auto" height="30%">
             <p id="pergunta" style="font-size: 180%; font-weight: 650; text-align: center; margin-top: 2%;"></p>
         </div>
-        <div id="alternativas" class="container centermid column"></div>
+        <div id="alternativas" class="container centermid column center"></div>
     </div>
+
 
     <div id="Results" class="container centermid center column" style="display: none; height: 800px;">
         <div class="container column centermid center"
@@ -43,6 +44,51 @@
     </div>
     <script>
         var Questions = [
+            //Monteiro Lobato
+            {
+                question: "\"País de mestiços onde o branco não tem força para organizar uma Ku Klux Klan é um país perdido[...]\" Quem foi o autor da frase?",
+                alternatives: {
+                    a: "Florestan Fernandes",
+                    b: "Miguel Colto",
+                    c: "Augustus Freye",
+                    d: "Monteiro Lobato"
+                },
+                res: "d"
+            },
+            //Alexandre Tepedino
+            {
+                question: "\"Embora o Brasil tenha tudo para ser um país próspero, o povo não estava a sua altura\" Quem foi o autor da frase?",
+                alternatives: {
+                    a: "Monteiro Lobato",
+                    b: "Miguel Couto",
+                    c: "Alexandre Tepedino",
+                    d: "Florestan Fernandes"
+                },
+                res: "c"
+            },
+            //Miguel Couto
+            {
+                question: "A emenda constitucional de 1934 com o objetivo de barrar a entrada de japoneses no Brasil ficou conhecida como?",
+                alternatives: {
+                    a: "Ementa Manuel Ketshup",
+                    b: "Ementa Japonesa",
+                    c: "Emenda Miguel Couto",
+                    d: "Emenda Imigração"
+                },
+                res: "c"
+            },
+            //Renato Kehl
+            {
+                question: "Quem é o pai da eugenia no Brasil?",
+                alternatives: {
+                    a: "Miguel Colto",
+                    b: "Monteiro Lobato",
+                    c: "Renato Kehl",
+                    d: "Florestan Fernandes"
+                },
+                res: "c"
+            },
+            //Conde Gobrineau
             {
                 question: "Qual sociólogo afirmava que o casamento entre raças diferentes resultava em criaturas repugnantes",
                 alternatives: {
@@ -54,25 +100,16 @@
                 res: "a"
             },
             {
-                question: "A emenda constitucional de 1934 com o objetivo de barrar a entrada de japoneses no Brasil ficou conhecida como?",
-                alternatives: {
-                    a: "Ementa Manuel Ketshup",
-                    b: "Ementa Japonesa",
-                    c: "Emenda Miguel Couto",
-                    d: "Emenda Imigração"
-                },
-                res: "c"
-            },
-            {
-                question: "\"Embora o Brasil tenha tudo para ser um país próspero, o povo não estava a sua altura\" Quem foi o autor da frase?",
+                question: "Para _______, a população brasileira iria acabar em menos de 200 anos, pois seria uma população toda mulata",
                 alternatives: {
                     a: "Monteiro Lobato",
-                    b: "Miguel Couto",
-                    c: "Alexandre Tepedino",
-                    d: "Florestan Fernandes"
+                    b: "Conde de Gobrineau",
+                    c: "Florestan Fernandes",
+                    d: "Miguel Couto"
                 },
-                res: "c"
+                res: "b"
             },
+            //Florestan Fernandes
             {
                 question: "\"O brasileiro tem preconceito de ter preconceito\" Qual foi o autor dessa frase?",
                 alternatives: {
@@ -83,48 +120,19 @@
                 },
                 res: "b"
             },
-            {
-                question: "\"País de mestiços onde o branco não tem força para organizar uma Ku Klux Klan é um país perdido[...]\" Quem foi o autor da frase?",
-                alternatives: {
-                    a: "Florestan Fernandes",
-                    b: "Miguel Colto",
-                    c: "Augustus Freye",
-                    d: "Monteiro Lobato"
-                },
-                res: "d"
-            },
-            {
-                question: "Quem é o pai da eugenia no Brasil?",
-                alternatives: {
-                    a: "Miguel Colto",
-                    b: "Monteiro Lobato",
-                    c: "Renato Kehl",
-                    d: "Florestan Fernandes"
-                },
-                res: "c"
-            },
+            //Aleatórias
             {
                 question: "Qual século foi o auge do racismo científico?",
                 alternatives: {
-                    a: "XI",
-                    b: "IX",
-                    c: "XXI",
-                    d: "XIX"
+                    a: "Século XI",
+                    b: "Século IX",
+                    c: "Século XXI",
+                    d: "Século XIX"
                 },
                 res: "d"
             },
             {
-                question: "Para _______, a população brasileira iria acabar em menos de 200 anos, pois seria uma população toda mulata",
-                alternatives: {
-                    a: "Monteiro Lobato",
-                    b: "Conde de Gobrineau",
-                    c: "Florestan Fernandes",
-                    d: "Miguel Couto"
-                },
-                res: "b"
-            },
-                        {
-                question: "O branqueamento para os médicos eugênicos seria a forma de corrigir corrigir problemas genéticos adquiridos com:",
+                question: "O branqueamento para os médicos eugenistas seria a forma de corrigir corrigir problemas genéticos adquiridos com:",
                 alternatives: {
                     a: "O racismo",
                     b: "A guerra",
@@ -132,6 +140,16 @@
                     d: "A desigualdade"
                 },
                 res: "c"
+            },
+            {
+                question: "Qual teoria a eugenia busca explicar?",
+                alternatives: {
+                    a: "A justiça no mundo",
+                    b: "A superioridade de raças",
+                    c: "A legalidade de territórios",
+                    d: "A desigualdade entre países"
+                },
+                res: "b"
             },
 
         ]
@@ -161,12 +179,27 @@
             }
             var ramdomquestion = Questions[n];
             document.getElementById('pergunta').innerHTML += ramdomquestion.question;
-            document.getElementById('alternativas').innerHTML += `
-            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "a")'>${ramdomquestion.alternatives.a}</Button>
-            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "b")'>${ramdomquestion.alternatives.b}</Button>
-            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "c")'>${ramdomquestion.alternatives.c}</Button>
-            <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "d")'>${ramdomquestion.alternatives.d}</Button>
+            if(modocb == true){
+                document.getElementById('alternativas').innerHTML += `
+                <div class="container row" style="width: 100%; justify-content: center; aling-itens: center">
+                    <div class="container column" style="width: 50%">
+                        <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "a")'>${ramdomquestion.alternatives.a}</Button>
+                        <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "b")'>${ramdomquestion.alternatives.b}</Button>
+                    </div>
+                    <div class="container column" style="width: 50%">
+                        <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "c")'>${ramdomquestion.alternatives.c}</Button>
+                        <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "d")'>${ramdomquestion.alternatives.d}</Button>
+                    </div>
+                </div>
             `
+            } else{
+                document.getElementById('alternativas').innerHTML += `
+                <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "a")'>${ramdomquestion.alternatives.a}</Button>
+                <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "b")'>${ramdomquestion.alternatives.b}</Button>
+                <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "c")'>${ramdomquestion.alternatives.c}</Button>
+                <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "d")'>${ramdomquestion.alternatives.d}</Button>
+            `
+            }
             numberquestion = numberquestion + 1;
         }
 
@@ -199,9 +232,22 @@
             return false;
         }
 
+        function openPCv(){
+            if(pcV == 9){
+                alert('Versão chrome ativada!')
+                modocb = true;
+
+            } else{
+                pcV++
+                console.log(pcV)
+            }
+        }
+
         let numberquestion = 1;
         let acepts = 0;
         var repiter = [];
+        var pcV = 0;
+        var modocb = false;
 
     </script>
 </body>
