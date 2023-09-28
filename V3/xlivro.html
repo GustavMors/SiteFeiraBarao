@@ -1,20 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" id='stylesheet' href="csspage.css">
     <title>Livro da 301</title>
-    <link rel="icon" type="images/x-icon"
-        href="assets/purplebook.png">
+    <link rel="icon" type="images/x-icon" href="assets/purplebook.png">
 </head>
-<body style="background-image: url(assets/fundobook.png); background-size: cover; background-position: center center; height: 100%; ">
-    <div class="container center centermid column" style="height: 700px; margin: 0%;">
-        <Button class="botaoquestion" style="margin: 3%;">Parte 1</Button>
-        <Button class="botaoquestion" style="margin: 3%;">Parte 2</Button>
-        <Button class="botaoquestion" style="margin: 3%;">Parte 3</Button>
-        <Button class="botaoquestion" style="margin: 3%;">Parte 4</Button>
-        <a class="botaoparticipantes" href="index.html">Em breve!</a>
+
+<body
+    style="background-image: url(assets/basetop.png); background-size: cover; background-position: center center; height: 100%; margin-top: 4%;">
+    <div id="Initial" class="container column centermid center" style="height: 800px; width: 100%;">
+        <div class="container column">
+            <button class="botaoautores"; style="background-image: url(assets/Eugenia.jpg); background-size: cover;"
+                onclick="push('Eugenia', 'Initial')"></button>
+            <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin-top: 0%;">Eugenia</p>
+        </div>
+        <div class="container row" style="justify-content: space-around; width: 100%;">
+            <div class="container column">
+                <button class="botaoautores" ; style="background-image: url(assets/monteirolobato.jpg);"
+                    onclick="push('Monteiro', 'Initial')"></button>
+                <p class="centertext" style="font-size: 110%; font-weight: 700; color: white; margin-top: 2%;">Monteiro Lobato</p>
+            </div>
+            <div class="container column">
+                <button class="botaoautores" ; style="background-image: url(assets/Miguelcolto.png);" onclick="push('Couto', 'Initial')"></button>
+                <p class="centertext" style="font-size: 110%; font-weight: 700; color: white; margin-top: 2%;">Miguel Couto</p>
+            </div>
+        </div>
+        <div class="container row" style="width: 100%; justify-content: space-around;">
+            <div class="container column">
+                <button class="botaoautores" ; style="background-image: url(assets/renatokehl.jpg);" onclick="push('Renato', 'Initial')"></button>
+                <p class="centertext" style="font-size: 110%; font-weight: 700; color: white; margin-top: 2%;">Renato Kehl</p>
+            </div>
+            <div class="container column">
+                <button class="botaoautores" ;
+                    style="background-image: url(assets/Gobineau.webp); background-size: 150%;" onclick="push('Gobineau', 'Initial')"></button>
+                <p class="centertext" style="font-size: 110%; font-weight: 700; color: white; margin-top: 2%;">Gobineau</p>
+            </div>
+        </div>
+        <div class="container column centermid center" style="width: 20%;">
+            <button class="botaoautores" ; style="background-image: url(assets/florestan.png);"
+                onclick="push('Florestan', 'Initial')"></button>
+            <p class="centertext" style="font-size: 110%; font-weight: 700; color: white; margin-top: 2%;">Florestan Fernandes</p>
+        </div>
     </div>
+
+    <div id="Eugenia" style="display: none; height: 800px;">
+        <div class="container centermid center">
+            <div class="container column" style="justify-content: center; width: 80%;">
+                <p class="centertext" style="font-size: 290%; font-weight: 700; color: white;">Eugenia</p>
+                <img src="assets/Eugenia.jpg" style="height: 20%; width: auto; border-radius: 10px;">
+                <p class="centertext" style="font-size: 170%; font-weight: 700; color: white; margin: 1%; text-shadow: 1px 1px black;">Teoria científica com seu auge no século XIX</p>
+                <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin: 5%; font-style: italic;">Busca provar a superioridade de raças e buscar formas de formas de combater a miscigenação e pessoas consideras inferioras</p>
+                <a class="botaoparticipantes" style="align-self: center;" href="xlivro.html">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Monteiro" style="display: none; height: 800px;">
+        <div class="container centermid center">
+            <div class="container column" style="justify-content: center; width: 80%;">
+                <p class="centertext" style="font-size: 290%; font-weight: 700; color: white;">Monteiro Lobato</p>
+                <img src="assets/monteirolobato.jpg" style="height: 20%; width: auto; border-radius: 10px;">
+                <p class="centertext" style="font-size: 170%; font-weight: 700; color: white; margin: 1%; text-shadow: 1px 1px black;">Escritor brasileiro</p>
+                <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin: 5%; font-style: italic;">"País de mestiços onde o branco não tem força para organizar uma Ku Klux Klan é um país perdido[...]"</p>
+                <a class="botaoparticipantes" style="align-self: center;" href="xlivro.html">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Couto" style="display: none; height: 800px;">
+        <div class="container centermid center">
+            <div class="container column" style="justify-content: center; width: 80%;">
+                <p class="centertext" style="font-size: 290%; font-weight: 700; color: white;">Miguel Couto</p>
+                <img src="assets//Miguelcolto.png" style="height: 20%; width: auto; border-radius: 10px;">
+                <p class="centertext" style="font-size: 170%; font-weight: 700; color: white; margin: 1%; text-shadow: 1px 1px black;">Médico brasileiro</p>
+                <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin: 5%; font-style: italic;">Com a ajuda de políticos da época, aprovou uma emenda constitucional que levava seu nome para tentar barrar a imigração japonesa</p>
+                <a class="botaoparticipantes" style="align-self: center;" href="xlivro.html">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Renato" style="display: none; height: 800px;">
+        <div class="container centermid center">
+            <div class="container column" style="justify-content: center; width: 80%;">
+                <p class="centertext" style="font-size: 290%; font-weight: 700; color: white;">Renato Kehl</p>
+                <img src="assets/renatokehl.jpg" style="height: 5%; width:auto; border-radius: 10px;">
+                <p class="centertext" style="font-size: 170%; font-weight: 700; color: white; margin: 1%; text-shadow: 1px 1px black;">Médico brasileiro</p>
+                <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin: 5%; font-style: italic;">Pai da eugenia no Brasil, apoiava a criação de um projeto amplo de branqueamento</p>
+                <a class="botaoparticipantes" style="align-self: center;" href="xlivro.html">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Gobineau" style="display: none; height: 800px;">
+        <div class="container centermid center">
+            <div class="container column" style="justify-content: center; width: 80%;">
+                <p class="centertext" style="font-size: 290%; font-weight: 700; color: white;">Conde de Gobineau</p>
+                <img src="assets/Gobineau.webp" style="height: 5%; width:auto; border-radius: 10px;">
+                <p class="centertext" style="font-size: 170%; font-weight: 700; color: white; margin: 1%; text-shadow: 1px 1px black;">Filósofo e escritor</p>
+                <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin: 5%; font-style: italic;">"O casamento entre raças resulta em criaturas repugnantes"</p>
+                <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin: 5%; font-style: italic;">Para Gobineau, a população brasileira não iria durar mais de 200 anos devido a miscigenação</p>
+                <a class="botaoparticipantes" style="align-self: center;" href="xlivro.html">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Florestan" style="display: none; height: 800px;">
+        <div class="container centermid center">
+            <div class="container column" style="justify-content: center; width: 80%;">
+                <p class="centertext" style="font-size: 290%; font-weight: 700; color: white;">Florestan Fernandes</p>
+                <img src="assets/florestan.png" style="height: 5%; width:auto; border-radius: 10px;">
+                <p class="centertext" style="font-size: 170%; font-weight: 700; color: white; margin: 1%; text-shadow: 1px 1px black;">Sociólogo brasileiro</p>
+                <p class="centertext" style="font-size: 150%; font-weight: 700; color: white; margin: 5%; font-style: italic;">"O brasileiro tem preconceito de ter preconceito"</p>
+                <a class="botaoparticipantes" style="align-self: center;" href="xlivro.html">Voltar</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function push(shown, hidden) {
+            document.getElementById(shown).style.display = 'block';
+            document.getElementById(hidden).style.display = 'none';
+            return false;
+        }
+    </script>
 </body>
+
 </html>

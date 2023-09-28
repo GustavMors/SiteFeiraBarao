@@ -18,7 +18,7 @@
                 QUIZ<br>Te espera!</p>
             <p style="font-size: 140%; margin: 0%; text-align: center; font-weight: 450;">Teste seus conhecimentos
                 com<br>base na apresentação!</p>
-            <Button class="botaoicon" onclick="start()">⮞</Button>
+            <Button class="botaoicon" onclick="start()">></Button>
         </div>
 
     </div>
@@ -35,7 +35,7 @@
 
     <div id="Results" class="container centermid center column" style="display: none; height: 800px;">
         <div class="container column centermid center"
-            style="background-color: white; border-radius: 15px; height: 40%; margin: 8%;">
+            style="background-color: white; border-radius: 15px; height: 60%; margin: 8%;">
             <p style="font-size: 240%; font-weight: bold; text-align: center;">Resultados:</p>
             <p id='FinalResult' style="font-size: 200%; font-weight: bold; text-align: center;"></p>
             <a class="botaoquestion" href="xquiz.html">Refazer quiz</a>
@@ -70,8 +70,8 @@
             {
                 question: "A emenda constitucional de 1934 com o objetivo de barrar a entrada de japoneses no Brasil ficou conhecida como?",
                 alternatives: {
-                    a: "Ementa Manuel Ketshup",
-                    b: "Ementa Japonesa",
+                    a: "Emenda Manuel Ketchup",
+                    b: "Emenda japonesa",
                     c: "Emenda Miguel Couto",
                     d: "Emenda Imigração"
                 },
@@ -132,7 +132,7 @@
                 res: "d"
             },
             {
-                question: "O branqueamento para os médicos eugenistas seria a forma de corrigir corrigir problemas genéticos adquiridos com:",
+                question: "O branqueamento para os médicos eugenistas seria a forma de corrigir problemas genéticos adquiridos com:",
                 alternatives: {
                     a: "O racismo",
                     b: "A guerra",
@@ -181,7 +181,7 @@
             document.getElementById('pergunta').innerHTML += ramdomquestion.question;
             if(modocb == true){
                 document.getElementById('alternativas').innerHTML += `
-                <div class="container row" style="width: 100%; justify-content: center; aling-itens: center">
+                <div class="container centermid center row" style="width: 100%; margin-left: 6%">
                     <div class="container column" style="width: 50%">
                         <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "a")'>${ramdomquestion.alternatives.a}</Button>
                         <Button class="botaoquestion" onclick='revise("${ramdomquestion.res}", "b")'>${ramdomquestion.alternatives.b}</Button>
@@ -233,7 +233,7 @@
         }
 
         function openPCv(){
-            if(pcV == 9){
+            if(pcV == 3){
                 alert('Versão chrome ativada!')
                 modocb = true;
 
